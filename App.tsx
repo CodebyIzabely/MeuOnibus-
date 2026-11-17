@@ -1,25 +1,33 @@
-import { useEffect, useState } from 'react';
-import { Text, ScrollView, View } from 'react-native';
-import { buscarLinhas } from './src/services/api';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import { StatusBar } from 'react-native';
+
+import { RootStackParamList } from './src/navigation';
+import { cores } from './src/theme';
+import HomeScreen from './src/screens/HomeScreen';
+import LinhasScreen from './src/screens/LinhasScreen';
+import LinhaDetalheScreen from './src/screens/LinhaDetalheScreen';
+import PrevisaoScreen from './src/screens/PrevisaoScreen';
+
+const Stack = createNativeStackNavigator<RootStackParamList>();
 
 export default function App() {
-  const [res, setRes] = useState('carregando...');
-  useEffect(() => {
-    buscarLinhas('8000')
-      .then(d => {
-        console.log('RESULTADO:', d);
-        setRes(JSON.stringify(d, null, 2));
-      })
-      .catch(e => {
-        console.log('ERRO:', e.message);
-        setRes('ERRO: ' + e.message);
-      });
-  }, []);
   return (
-    <View style={{ flex: 1, backgroundColor: '#fff' }}>
-      <ScrollView style={{ marginTop: 60, padding: 10 }}>
-        <Text style={{ color: '#000', fontSize: 14 }}>{res}</Text>
-      </ScrollView>
-    </View>
+    <NavigationContainer>
+      <StatusBar barStyle="light-content" />
+      <Stack.Navigator
+        screenOptions={{
+          headerStyle: { backgroundColor: cores.primaria },
+          headerTintColor: '#fff',
+          headerTitleStyle: { fontWeight: '700' },
+          contentStyle: { backgroundColor: cores.fundo },
+        }}
+      >
+        <Stack.Screen name="Home" component={HomeScreen} options={{ title: 'Meu Ônibus SP' }} />
+        <Stack.Screen name="Linhas" component={LinhasScreen} options={{ title: 'Buscar linha' }} />
+        <Stack.Screen name="LinhaDetalhe" component={LinhaDetalheScreen} options={{ title: 'Linha' }} />
+        <Stack.Screen name="Previsao" component={PrevisaoScreen} options={{ title: 'Próximos ônibus' }} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
