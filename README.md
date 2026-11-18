@@ -20,6 +20,16 @@ O app facilita a mobilidade urbana em São Paulo consumindo a **API Olho Vivo da
 - AsyncStorage (`@react-native-async-storage/async-storage`)
 - API Olho Vivo – SPTrans (v2.1)
 
+## 📱 Demonstração do app
+
+| Tela inicial | Buscar linha | Detalhe da linha |
+|:---:|:---:|:---:|
+| <img src="screenshots/Home.jpeg" width="220"> | <img src="screenshots/linhas.jpeg" width="220"> | <img src="screenshots/previsão.jpeg" width="220"> |
+
+| Previsão de chegada | Favoritos |
+|:---:|:---:|:---:|
+| <img src="screenshots/paradas.jpeg" width="220"> | <img src="screenshots/favoritos.jpeg" width="220"> |
+
 ## ▶️ Como executar
 
 1. Instale o Node.js (LTS) e o app **Expo Go** no celular
