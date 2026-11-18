@@ -22,13 +22,13 @@ O app facilita a mobilidade urbana em São Paulo consumindo a **API Olho Vivo da
 
 ## 📱 Demonstração do app
 
-| Tela inicial | Buscar linha | Detalhe da linha |
+| Tela inicial | Buscar linha | Previsão de chegada |
 |:---:|:---:|:---:|
-| <img src="screenshots/Home.jpeg" width="220"> | <img src="screenshots/linhas.jpeg" width="220"> | <img src="screenshots/previsão.jpeg" width="220"> |
+| <img src="screenshots/Home.jpeg" width="220"> | <img src="screenshots/linhas.jpeg" width="220"> | <img src="screenshots/previsao.jpeg" width="220"> |
 
-| Previsão de chegada | Favoritos |
-|:---:|:---:|:---:|
-| <img src="screenshots/paradas.jpeg" width="220"> | <img src="screenshots/favoritos.jpeg" width="220"> |
+| Buscar parada | Favoritos |
+|:---:|:---:|
+| <img src="screenshots/paradas.jpeg" width="220"> | <img src="screenshots/Favoritos.jpeg" width="220"> |
 
 ## ▶️ Como executar
 
